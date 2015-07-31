@@ -7,13 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1914E9A11B6B5E2D00D04654 /* PinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1914E9A01B6B5E2D00D04654 /* PinViewController.m */; };
+		1914E9A51B6B63CB00D04654 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1914E9A21B6B63CB00D04654 /* Default-568h@2x.png */; };
+		1914E9A61B6B63CB00D04654 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1914E9A31B6B63CB00D04654 /* Default.png */; };
+		1914E9A71B6B63CB00D04654 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1914E9A41B6B63CB00D04654 /* Default@2x.png */; };
 		19FD281A1B69C5EF00207D10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FD28191B69C5EF00207D10 /* main.m */; };
 		19FD281D1B69C5EF00207D10 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FD281C1B69C5EF00207D10 /* AppDelegate.m */; };
 		19FD28201B69C5EF00207D10 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FD281F1B69C5EF00207D10 /* ViewController.m */; };
 		19FD28231B69C5EF00207D10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19FD28211B69C5EF00207D10 /* Main.storyboard */; };
-		19FD28251B69C5EF00207D10 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19FD28241B69C5EF00207D10 /* Images.xcassets */; };
-		19FD28281B69C5EF00207D10 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19FD28261B69C5EF00207D10 /* LaunchScreen.xib */; };
 		19FD28341B69C5EF00207D10 /* baiduMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FD28331B69C5EF00207D10 /* baiduMapTests.m */; };
+		19FD28701B69CD6B00207D10 /* BaiduMapAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FD286F1B69CD6B00207D10 /* BaiduMapAPI.framework */; };
+		19FD28721B69CD7800207D10 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FD28711B69CD7800207D10 /* CoreLocation.framework */; };
+		19FD28741B69CD8000207D10 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FD28731B69CD8000207D10 /* QuartzCore.framework */; };
+		19FD28761B69CD8900207D10 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FD28751B69CD8900207D10 /* OpenGLES.framework */; };
+		19FD28781B69CD9000207D10 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FD28771B69CD9000207D10 /* SystemConfiguration.framework */; };
+		19FD287A1B69CD9800207D10 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FD28791B69CD9800207D10 /* CoreGraphics.framework */; };
+		19FD287C1B69CD9F00207D10 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FD287B1B69CD9F00207D10 /* Security.framework */; };
+		19FD287E1B69CDAB00207D10 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19FD287D1B69CDAB00207D10 /* UIKit.framework */; };
+		19FD28801B69CDE500207D10 /* mapapi.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 19FD287F1B69CDE500207D10 /* mapapi.bundle */; };
+		19FD28831B69D17800207D10 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FD28821B69D17800207D10 /* MapViewController.m */; };
+		19FD28A01B6A111D00207D10 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FD289F1B6A111D00207D10 /* SearchViewController.m */; };
+		19FD28B51B6A1AE800207D10 /* UIView+ZYQuickControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FD28B21B6A1AE800207D10 /* UIView+ZYQuickControl.m */; };
+		19FD28B61B6A1AE800207D10 /* ZYButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FD28B41B6A1AE800207D10 /* ZYButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +42,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1914E99F1B6B5E2D00D04654 /* PinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinViewController.h; sourceTree = "<group>"; };
+		1914E9A01B6B5E2D00D04654 /* PinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinViewController.m; sourceTree = "<group>"; };
+		1914E9A21B6B63CB00D04654 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		1914E9A31B6B63CB00D04654 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1914E9A41B6B63CB00D04654 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		19FD28141B69C5EF00207D10 /* baiduMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = baiduMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FD28181B69C5EF00207D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19FD28191B69C5EF00207D10 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -35,11 +55,26 @@
 		19FD281E1B69C5EF00207D10 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		19FD281F1B69C5EF00207D10 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		19FD28221B69C5EF00207D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		19FD28241B69C5EF00207D10 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		19FD28271B69C5EF00207D10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		19FD282D1B69C5EF00207D10 /* baiduMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = baiduMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		19FD28321B69C5EF00207D10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19FD28331B69C5EF00207D10 /* baiduMapTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = baiduMapTests.m; sourceTree = "<group>"; };
+		19FD286F1B69CD6B00207D10 /* BaiduMapAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BaiduMapAPI.framework; sourceTree = "<group>"; };
+		19FD28711B69CD7800207D10 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		19FD28731B69CD8000207D10 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		19FD28751B69CD8900207D10 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		19FD28771B69CD9000207D10 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		19FD28791B69CD9800207D10 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		19FD287B1B69CD9F00207D10 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		19FD287D1B69CDAB00207D10 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		19FD287F1B69CDE500207D10 /* mapapi.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = mapapi.bundle; path = BaiduMapAPI.framework/Resources/mapapi.bundle; sourceTree = "<group>"; };
+		19FD28811B69D17800207D10 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		19FD28821B69D17800207D10 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		19FD289E1B6A111D00207D10 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		19FD289F1B6A111D00207D10 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		19FD28B11B6A1AE800207D10 /* UIView+ZYQuickControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ZYQuickControl.h"; sourceTree = "<group>"; };
+		19FD28B21B6A1AE800207D10 /* UIView+ZYQuickControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ZYQuickControl.m"; sourceTree = "<group>"; };
+		19FD28B31B6A1AE800207D10 /* ZYButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYButton.h; sourceTree = "<group>"; };
+		19FD28B41B6A1AE800207D10 /* ZYButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +82,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19FD287E1B69CDAB00207D10 /* UIKit.framework in Frameworks */,
+				19FD287C1B69CD9F00207D10 /* Security.framework in Frameworks */,
+				19FD287A1B69CD9800207D10 /* CoreGraphics.framework in Frameworks */,
+				19FD28781B69CD9000207D10 /* SystemConfiguration.framework in Frameworks */,
+				19FD28761B69CD8900207D10 /* OpenGLES.framework in Frameworks */,
+				19FD28741B69CD8000207D10 /* QuartzCore.framework in Frameworks */,
+				19FD28721B69CD7800207D10 /* CoreLocation.framework in Frameworks */,
+				19FD28701B69CD6B00207D10 /* BaiduMapAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +106,16 @@
 		19FD280B1B69C5EF00207D10 = {
 			isa = PBXGroup;
 			children = (
+				19FD28B01B6A1AE800207D10 /* ZYQuickControl */,
+				19FD287F1B69CDE500207D10 /* mapapi.bundle */,
+				19FD287D1B69CDAB00207D10 /* UIKit.framework */,
+				19FD287B1B69CD9F00207D10 /* Security.framework */,
+				19FD28791B69CD9800207D10 /* CoreGraphics.framework */,
+				19FD28771B69CD9000207D10 /* SystemConfiguration.framework */,
+				19FD28751B69CD8900207D10 /* OpenGLES.framework */,
+				19FD28731B69CD8000207D10 /* QuartzCore.framework */,
+				19FD28711B69CD7800207D10 /* CoreLocation.framework */,
+				19FD286F1B69CD6B00207D10 /* BaiduMapAPI.framework */,
 				19FD28161B69C5EF00207D10 /* baiduMap */,
 				19FD28301B69C5EF00207D10 /* baiduMapTests */,
 				19FD28151B69C5EF00207D10 /* Products */,
@@ -83,11 +136,15 @@
 			children = (
 				19FD281B1B69C5EF00207D10 /* AppDelegate.h */,
 				19FD281C1B69C5EF00207D10 /* AppDelegate.m */,
+				1914E99F1B6B5E2D00D04654 /* PinViewController.h */,
+				1914E9A01B6B5E2D00D04654 /* PinViewController.m */,
+				19FD289E1B6A111D00207D10 /* SearchViewController.h */,
+				19FD289F1B6A111D00207D10 /* SearchViewController.m */,
 				19FD281E1B69C5EF00207D10 /* ViewController.h */,
 				19FD281F1B69C5EF00207D10 /* ViewController.m */,
+				19FD28811B69D17800207D10 /* MapViewController.h */,
+				19FD28821B69D17800207D10 /* MapViewController.m */,
 				19FD28211B69C5EF00207D10 /* Main.storyboard */,
-				19FD28241B69C5EF00207D10 /* Images.xcassets */,
-				19FD28261B69C5EF00207D10 /* LaunchScreen.xib */,
 				19FD28171B69C5EF00207D10 /* Supporting Files */,
 			);
 			path = baiduMap;
@@ -96,6 +153,9 @@
 		19FD28171B69C5EF00207D10 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1914E9A21B6B63CB00D04654 /* Default-568h@2x.png */,
+				1914E9A31B6B63CB00D04654 /* Default.png */,
+				1914E9A41B6B63CB00D04654 /* Default@2x.png */,
 				19FD28181B69C5EF00207D10 /* Info.plist */,
 				19FD28191B69C5EF00207D10 /* main.m */,
 			);
@@ -117,6 +177,18 @@
 				19FD28321B69C5EF00207D10 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		19FD28B01B6A1AE800207D10 /* ZYQuickControl */ = {
+			isa = PBXGroup;
+			children = (
+				19FD28B11B6A1AE800207D10 /* UIView+ZYQuickControl.h */,
+				19FD28B21B6A1AE800207D10 /* UIView+ZYQuickControl.m */,
+				19FD28B31B6A1AE800207D10 /* ZYButton.h */,
+				19FD28B41B6A1AE800207D10 /* ZYButton.m */,
+			);
+			name = ZYQuickControl;
+			path = baiduMap/ZYQuickControl;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,9 +271,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1914E9A71B6B63CB00D04654 /* Default@2x.png in Resources */,
 				19FD28231B69C5EF00207D10 /* Main.storyboard in Resources */,
-				19FD28281B69C5EF00207D10 /* LaunchScreen.xib in Resources */,
-				19FD28251B69C5EF00207D10 /* Images.xcassets in Resources */,
+				1914E9A51B6B63CB00D04654 /* Default-568h@2x.png in Resources */,
+				19FD28801B69CDE500207D10 /* mapapi.bundle in Resources */,
+				1914E9A61B6B63CB00D04654 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -219,9 +293,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19FD28B61B6A1AE800207D10 /* ZYButton.m in Sources */,
 				19FD28201B69C5EF00207D10 /* ViewController.m in Sources */,
 				19FD281D1B69C5EF00207D10 /* AppDelegate.m in Sources */,
+				19FD28A01B6A111D00207D10 /* SearchViewController.m in Sources */,
+				1914E9A11B6B5E2D00D04654 /* PinViewController.m in Sources */,
+				19FD28B51B6A1AE800207D10 /* UIView+ZYQuickControl.m in Sources */,
 				19FD281A1B69C5EF00207D10 /* main.m in Sources */,
+				19FD28831B69D17800207D10 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,14 +329,6 @@
 				19FD28221B69C5EF00207D10 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		19FD28261B69C5EF00207D10 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				19FD28271B69C5EF00207D10 /* Base */,
-			);
-			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -349,9 +420,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = baiduMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -359,9 +439,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_INPUT_FILETYPE = sourcecode.cpp.objcpp;
 				INFOPLIST_FILE = baiduMap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -418,6 +507,7 @@
 				19FD28391B69C5EF00207D10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19FD283A1B69C5EF00207D10 /* Build configuration list for PBXNativeTarget "baiduMapTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +516,7 @@
 				19FD283C1B69C5EF00207D10 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
