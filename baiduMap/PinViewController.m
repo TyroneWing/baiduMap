@@ -7,8 +7,14 @@
 //
 
 #import "PinViewController.h"
+
 #import <BaiduMapAPI/BMapKit.h>//引入所有的头文件
 #import <BaiduMapAPI/BMKMapView.h>//只引入所需的单个头文件
+
+#import "UIView+ZYQuickControl.h"
+#import "MyBMKPointAnnotation.h"
+#import "companyViewController.h"
+
 
 @interface PinViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate>
 {
@@ -30,43 +36,226 @@
     _mapView = [[BMKMapView alloc]initWithFrame:self.view.bounds];
     //卫星地图
     //    [_mapView setMapType:BMKMapTypeSatellite];
-    [_mapView setTrafficEnabled:YES];
+//    [_mapView setTrafficEnabled:YES];
     [self.view addSubview:_mapView];
+    _mapView.delegate = self;
     _mapView.zoomLevel = 15;
     
-    //定位
-    _locService = [[BMKLocationService alloc]init];
-    _locService.delegate = self;
-    
-    [_locService startUserLocationService];
-    
-    _mapView.showsUserLocation = NO;//先关闭显示的定位图层
-    _mapView.userTrackingMode = BMKUserTrackingModeNone;//设置定位的状态
-    _mapView.showsUserLocation = YES;//显示定位图层
-    //跟随模式
-    _mapView.userTrackingMode = BMKUserTrackingModeFollow;
-    _mapView.showsUserLocation = YES;//显示定位图层
+//    //定位
+//    _locService = [[BMKLocationService alloc]init];
+//    _locService.delegate = self;
+//    
+//    [_locService startUserLocationService];
+//    
+//    _mapView.showsUserLocation = NO;//先关闭显示的定位图层
+//    _mapView.userTrackingMode = BMKUserTrackingModeNone;//设置定位的状态
+//    _mapView.showsUserLocation = YES;//显示定位图层
+//    //跟随模式
+//    _mapView.userTrackingMode = BMKUserTrackingModeFollow;
+//    _mapView.showsUserLocation = YES;//显示定位图层
     
     //定制大头针
-    BMKPointAnnotation* annotation = [[BMKPointAnnotation alloc]init];
-    annotation.title = @"当前位置！！！！！！！！！！！！";
+    
+    MyBMKPointAnnotation* annotation = [[MyBMKPointAnnotation alloc]init];
+    annotation.company = @"A工厂";
+    annotation.companyAdress = @"A路6号";
+    annotation.companyDescription = @"水污染：铅超标";
     CLLocationCoordinate2D coor;
     coor.latitude = 39.915;
     coor.longitude = 116.404;
     annotation.coordinate = coor;
     [_mapView addAnnotation:annotation];
+    
+    MyBMKPointAnnotation* annotation2 = [[MyBMKPointAnnotation alloc]init];
+    CLLocationCoordinate2D coor2;
+    coor2.latitude = 39.925;
+    coor2.longitude = 116.414;
+    annotation2.company = @"B公司";
+    annotation2.companyAdress = @"B路8号";
+    annotation2.companyDescription = @"PH值异常";
+    annotation2.coordinate = coor2;
+    [_mapView addAnnotation:annotation2];
+    
 }
 
+
+
+
+//-(BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
+//{
+//    if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
+//        BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc]initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
+//        newAnnotationView.animatesDrop = YES;
+//        newAnnotationView.annotation = annotation;
+//        //这里我根据自己需要，继承了BMKPointAnnotation，添加了标注的类型等需要的信息
+//        MyBMKPointAnnotation *tt = (MyBMKPointAnnotation *)annotation;
+//        
+//        //判断类别，需要添加不同类别，来赋予不同的标注图片
+//        if (tt.profNumber == 100000) {
+//            newAnnotationView.image = [UIImage imageNamed:@"ic_map_mode_category_merchants_normal.png"];
+//        }else if (tt.profNumber == 100001){
+//            
+//        }
+//        //设定popView的高度，根据是否含有缩略图
+//        double popViewH = 60;
+//        if (annotation.subtitle == nil) {
+//            popViewH = 38;
+//        }
+//        UIView *popView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenWidth-100, popViewH)];
+//        popView.backgroundColor = [UIColor whiteColor];
+//        [popView.layer setMasksToBounds:YES];
+//        [popView.layer setCornerRadius:3.0];
+//        popView.alpha = 0.9;
+//        //        //设置弹出气泡图片
+//        //        UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:tt.imgPath]];
+//        //        image.frame = CGRectMake(0, 160, 50, 60);
+//        //        [popView addSubview:image];
+//        
+//        //自定义气泡的内容，添加子控件在popView上
+//        UILabel *driverName = [[UILabel alloc]initWithFrame:CGRectMake(8, 4, 160, 30)];
+//        driverName.text = annotation.title;
+//        driverName.numberOfLines = 0;
+//        driverName.backgroundColor = [UIColor clearColor];
+//        driverName.font = [UIFont systemFontOfSize:15];
+//        driverName.textColor = [UIColor blackColor];
+//        driverName.textAlignment = NSTextAlignmentLeft;
+//        [popView addSubview:driverName];
+//        
+//        UILabel *carName = [[UILabel alloc]initWithFrame:CGRectMake(8, 30, 180, 30)];
+//        carName.text = annotation.subtitle;
+//        carName.backgroundColor = [UIColor clearColor];
+//        carName.font = [UIFont systemFontOfSize:11];
+//        carName.textColor = [UIColor lightGrayColor];
+//        carName.textAlignment = NSTextAlignmentLeft;
+//        [popView addSubview:carName];
+//        
+//        if (annotation.subtitle != nil) {
+//            UIButton *searchBn = [[UIButton alloc]initWithFrame:CGRectMake(170, 0, 50, 60)];
+//            [searchBn setTitle:@"查看路线" forState:UIControlStateNormal];
+//            searchBn.backgroundColor = mainColor;
+//            searchBn.titleLabel.numberOfLines = 0;
+//            [searchBn addTarget:self action:@selector(searchLine)];
+//            [popView addSubview:searchBn];
+//        }
+//        
+//        BMKActionPaopaoView *pView = [[BMKActionPaopaoView alloc]initWithCustomView:popView];
+//        pView.frame = CGRectMake(0, 0, ScreenWidth-100, popViewH);
+//        ((BMKPinAnnotationView*)newAnnotationView).paopaoView = nil;
+//        ((BMKPinAnnotationView*)newAnnotationView).paopaoView = pView;
+//        return newAnnotationView;
+//    }
+//    return nil;
+//}
+//
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
 {
     if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
         BMKPinAnnotationView *newAnnotationView = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"myAnnotation"];
-        newAnnotationView.pinColor = BMKPinAnnotationColorPurple;
+        newAnnotationView.pinColor = BMKPinAnnotationColorRed;
         newAnnotationView.animatesDrop = YES;// 设置该标注点动画显示
+        newAnnotationView.paopaoView = nil;
+        
+        MyBMKPointAnnotation *MyAnnotation = (MyBMKPointAnnotation *)annotation;
+        UIView *_areaPaoView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 180, 80)];
+        _areaPaoView.backgroundColor=[UIColor redColor];
+        
+        
+        [_areaPaoView addLabelWithFrame:CGRectMake(0, 0, 80, 30) text:MyAnnotation.company];
+        
+        [_areaPaoView addLabelWithFrame:CGRectMake(80, 0, 100, 30) text:MyAnnotation.companyAdress];
+        
+        [_areaPaoView addLabelWithFrame:CGRectMake(00, 40, 150, 30) text:MyAnnotation.companyDescription];
+        
+        [_areaPaoView addSystemButtonWithFrame:CGRectMake(140, 0, 40, 30) title:@"查看" action:^(UIButton *button) {
+            
+            NSLog(@"%@:%@",MyAnnotation.company,MyAnnotation.companyDescription);
+            
+            companyViewController *comVC = [[companyViewController alloc] init];
+            comVC.company = MyAnnotation.company;
+            [self.navigationController pushViewController:comVC animated:YES];
+        }];
+        
+        
+        BMKActionPaopaoView *paopao=[[BMKActionPaopaoView alloc] initWithCustomView:_areaPaoView];
+        newAnnotationView.paopaoView = paopao;
+
         return newAnnotationView;
     }
     return nil;
 }
+
+- (void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view
+{
+    NSLog(@"大头针点击");
+    
+
+    NSLog(@"点击之前lon%f,lat%f",_mapView.centerCoordinate.longitude,_mapView.centerCoordinate.latitude);
+    
+    _mapView.centerCoordinate = view.annotation.coordinate;
+    
+    NSLog(@"点击之后lon：%f,lat%f",_mapView.centerCoordinate.longitude,_mapView.centerCoordinate.latitude);
+
+}
+
+
+// 当点击annotation view弹出的泡泡时，调用此接口
+- (void)mapView:(BMKMapView *)mapView annotationViewForBubble:(BMKAnnotationView *)view;
+{
+    NSLog(@"paopaoclick");
+//    view.paopaoView.hidden = YES;
+
+}
+
+
+//// 根据anntation生成对应的View
+//- (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
+//{
+//    NSString *AnnotationViewID = [NSString stringWithFormat:@"renameMark%d",i];
+//    
+//    newAnnotation = [[BMKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:AnnotationViewID];
+//    // 设置颜色
+//    ((BMKPinAnnotationView*)newAnnotation).pinColor = BMKPinAnnotationColorPurple;
+//    // 从天上掉下效果
+//    ((BMKPinAnnotationView*)newAnnotation).animatesDrop = YES;
+//    // 设置可拖拽
+//    ((BMKPinAnnotationView*)newAnnotation).draggable = YES;
+//    //设置大头针图标
+//    ((BMKPinAnnotationView*)newAnnotation).image = [UIImage imageNamed:@"zhaohuoche"];
+//    
+//    UIView *popView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 100, 60)];
+//    //设置弹出气泡图片
+//    UIImageView *image = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"wenzi"]];
+//    image.frame = CGRectMake(0, 0, 100, 60);
+//    [popView addSubview:image];
+//    //自定义显示的内容
+//    UILabel *driverName = [[UILabel alloc]initWithFrame:CGRectMake(0, 3, 100, 20)];
+//    driverName.text = @"张XX师傅";
+//    driverName.backgroundColor = [UIColor clearColor];
+//    driverName.font = [UIFont systemFontOfSize:14];
+//    driverName.textColor = [UIColor whiteColor];
+//    driverName.textAlignment = NSTextAlignmentCenter;
+//    [popView addSubview:driverName];
+//    
+//    UILabel *carName = [[UILabel alloc]initWithFrame:CGRectMake(0, 25, 100, 20)];
+//    carName.text = @"京A123456";
+//    carName.backgroundColor = [UIColor clearColor];
+//    carName.font = [UIFont systemFontOfSize:14];
+//    carName.textColor = [UIColor whiteColor];
+//    carName.textAlignment = NSTextAlignmentCenter;
+//    [popView addSubview:carName];
+//    BMKActionPaopaoView *pView = [[BMKActionPaopaoView alloc]initWithCustomView:popView];
+//    pView.frame = CGRectMake(0, 0, 100, 60);
+//    ((BMKPinAnnotationView*)newAnnotation).paopaoView = nil;
+//    ((BMKPinAnnotationView*)newAnnotation).paopaoView = pView;
+//    i++;
+//    return newAnnotation;
+//    
+//}
+
+
+
+
+
 /**
  *在地图View将要启动定位时，会调用此函数
  *@param mapView 地图View
@@ -117,7 +306,6 @@
 {
     NSLog(@"location error");
 }
-
 
 - (void)dealloc {
     if (_mapView) {

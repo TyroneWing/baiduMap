@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>72079106-9800-4D3C-B3AA-847C23459BDA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>baiduMap</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>81547A311116C0A9F038DADF3A0EE5AE48E9BEEE</key>
+		<string>github.com:monianzy/baiduMap.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>baiduMap.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>81547A311116C0A9F038DADF3A0EE5AE48E9BEEE</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:monianzy/baiduMap.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>81547A311116C0A9F038DADF3A0EE5AE48E9BEEE</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>81547A311116C0A9F038DADF3A0EE5AE48E9BEEE</string>
+			<key>IDESourceControlWCCName</key>
+			<string>baiduMap</string>
+		</dict>
+	</array>
+</dict>
+</plist>
