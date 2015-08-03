@@ -34,6 +34,7 @@
 //        [self.navigationController pushViewController:searVC animated:YES];
 //    }];
     
+    self.title = @"百度地图SDK使用";
     _itemArray = @[@"定位",@"地址编码和反编码",@"大头针气泡功能"];
     
     

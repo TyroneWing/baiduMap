@@ -14,6 +14,7 @@
 #import "UIView+ZYQuickControl.h"
 #import "MyBMKPointAnnotation.h"
 #import "companyViewController.h"
+#import "CompanyClass.h"
 
 
 @interface PinViewController ()<BMKMapViewDelegate,BMKLocationServiceDelegate>
@@ -76,9 +77,23 @@
     annotation2.coordinate = coor2;
     [_mapView addAnnotation:annotation2];
     
+    MyBMKPointAnnotation* annotation3 = [[MyBMKPointAnnotation alloc]init];
+    CLLocationCoordinate2D coor3;
+    coor3.latitude = 39.905;
+    coor3.longitude = 116.424;
+    annotation3.company = @"C公司";
+    annotation3.companyAdress = @"C路1号";
+    annotation3.companyDescription = @"重金属含量超标";
+    annotation3.coordinate = coor3;
+    [_mapView addAnnotation:annotation3];
+    
 }
 
-
+- (void)selectAnnotation:(id <BMKAnnotation>)annotation animated:(BOOL)animated;
+{
+    animated = NO;
+    NSLog(@"------------");
+}
 
 
 //-(BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
@@ -147,6 +162,8 @@
 //    return nil;
 //}
 //
+
+//定制大头针，并且重绘制气泡
 - (BMKAnnotationView *)mapView:(BMKMapView *)mapView viewForAnnotation:(id <BMKAnnotation>)annotation
 {
     if ([annotation isKindOfClass:[BMKPointAnnotation class]]) {
@@ -157,8 +174,8 @@
         
         MyBMKPointAnnotation *MyAnnotation = (MyBMKPointAnnotation *)annotation;
         UIView *_areaPaoView=[[UIView alloc] initWithFrame:CGRectMake(0, 0, 180, 80)];
-        _areaPaoView.backgroundColor=[UIColor redColor];
-        
+        _areaPaoView.backgroundColor=[UIColor whiteColor];
+        _areaPaoView.alpha = 0.9;
         
         [_areaPaoView addLabelWithFrame:CGRectMake(0, 0, 80, 30) text:MyAnnotation.company];
         
@@ -187,7 +204,6 @@
 - (void)mapView:(BMKMapView *)mapView didSelectAnnotationView:(BMKAnnotationView *)view
 {
     NSLog(@"大头针点击");
-    
 
     NSLog(@"点击之前lon%f,lat%f",_mapView.centerCoordinate.longitude,_mapView.centerCoordinate.latitude);
     
@@ -251,9 +267,6 @@
 //    return newAnnotation;
 //    
 //}
-
-
-
 
 
 /**

@@ -11,6 +11,7 @@
 		1914E9A51B6B63CB00D04654 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1914E9A21B6B63CB00D04654 /* Default-568h@2x.png */; };
 		1914E9A61B6B63CB00D04654 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1914E9A31B6B63CB00D04654 /* Default.png */; };
 		1914E9A71B6B63CB00D04654 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1914E9A41B6B63CB00D04654 /* Default@2x.png */; };
+		19B986871B6F4023002F4CCE /* CompanyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B986861B6F4023002F4CCE /* CompanyClass.m */; };
 		19F8ED6A1B6C79A700687FE7 /* MyBMKPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F8ED691B6C79A700687FE7 /* MyBMKPointAnnotation.m */; };
 		19F8ED6D1B6CB3D400687FE7 /* companyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F8ED6C1B6CB3D400687FE7 /* companyViewController.m */; };
 		19FD281A1B69C5EF00207D10 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19FD28191B69C5EF00207D10 /* main.m */; };
@@ -49,6 +50,8 @@
 		1914E9A21B6B63CB00D04654 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1914E9A31B6B63CB00D04654 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1914E9A41B6B63CB00D04654 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		19B986851B6F4023002F4CCE /* CompanyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyClass.h; sourceTree = "<group>"; };
+		19B986861B6F4023002F4CCE /* CompanyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyClass.m; sourceTree = "<group>"; };
 		19F8ED681B6C797F00687FE7 /* MyBMKPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBMKPointAnnotation.h; sourceTree = "<group>"; };
 		19F8ED691B6C79A700687FE7 /* MyBMKPointAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyBMKPointAnnotation.m; sourceTree = "<group>"; };
 		19F8ED6B1B6CB3D400687FE7 /* companyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = companyViewController.h; sourceTree = "<group>"; };
@@ -146,6 +149,8 @@
 				19F8ED691B6C79A700687FE7 /* MyBMKPointAnnotation.m */,
 				1914E99F1B6B5E2D00D04654 /* PinViewController.h */,
 				1914E9A01B6B5E2D00D04654 /* PinViewController.m */,
+				19B986851B6F4023002F4CCE /* CompanyClass.h */,
+				19B986861B6F4023002F4CCE /* CompanyClass.m */,
 				19F8ED6B1B6CB3D400687FE7 /* companyViewController.h */,
 				19F8ED6C1B6CB3D400687FE7 /* companyViewController.m */,
 				19FD289E1B6A111D00207D10 /* SearchViewController.h */,
@@ -303,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B986871B6F4023002F4CCE /* CompanyClass.m in Sources */,
 				19FD28B61B6A1AE800207D10 /* ZYButton.m in Sources */,
 				19FD28201B69C5EF00207D10 /* ViewController.m in Sources */,
 				19F8ED6D1B6CB3D400687FE7 /* companyViewController.m in Sources */,
