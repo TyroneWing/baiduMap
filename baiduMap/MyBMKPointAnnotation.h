@@ -16,4 +16,7 @@
 
 @property (nonatomic,retain) NSString *companyDescription;
 
+@property (nonatomic,assign) int companyType;
+
+
 @end

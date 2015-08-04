@@ -40,7 +40,7 @@
 //    [_mapView setTrafficEnabled:YES];
     [self.view addSubview:_mapView];
     _mapView.delegate = self;
-    _mapView.zoomLevel = 15;
+    _mapView.zoomLevel = 14;
     
 //    //定位
 //    _locService = [[BMKLocationService alloc]init];
@@ -65,6 +65,7 @@
     coor.latitude = 39.915;
     coor.longitude = 116.404;
     annotation.coordinate = coor;
+    annotation.companyType = 1;
     [_mapView addAnnotation:annotation];
     
     MyBMKPointAnnotation* annotation2 = [[MyBMKPointAnnotation alloc]init];
@@ -74,18 +75,32 @@
     annotation2.company = @"B公司";
     annotation2.companyAdress = @"B路8号";
     annotation2.companyDescription = @"PH值异常";
+    annotation2.companyType = 2;
+
     annotation2.coordinate = coor2;
     [_mapView addAnnotation:annotation2];
     
     MyBMKPointAnnotation* annotation3 = [[MyBMKPointAnnotation alloc]init];
     CLLocationCoordinate2D coor3;
     coor3.latitude = 39.905;
-    coor3.longitude = 116.424;
+    coor3.longitude = 116.444;
     annotation3.company = @"C公司";
     annotation3.companyAdress = @"C路1号";
     annotation3.companyDescription = @"重金属含量超标";
+    annotation3.companyType = 3;
     annotation3.coordinate = coor3;
     [_mapView addAnnotation:annotation3];
+    
+    MyBMKPointAnnotation* annotation4 = [[MyBMKPointAnnotation alloc]init];
+    annotation4.company = @"D工厂";
+    annotation4.companyAdress = @"D路6号";
+    annotation4.companyDescription = @"水污染严重";
+    CLLocationCoordinate2D coor4;
+    coor4.latitude = 39.920;
+    coor4.longitude = 116.413;
+    annotation4.coordinate = coor4;
+    annotation4.companyType = 1;
+    [_mapView addAnnotation:annotation4];
     
 }
 
@@ -195,6 +210,22 @@
         
         BMKActionPaopaoView *paopao=[[BMKActionPaopaoView alloc] initWithCustomView:_areaPaoView];
         newAnnotationView.paopaoView = paopao;
+        
+        if (MyAnnotation.companyType == 1) {
+//            newAnnotationView.pinColor = BMKPinAnnotationColorPurple;
+             newAnnotationView.image = [UIImage imageNamed:@"type1.png"];   //把大头针换成别的图片
+        }
+        else if (MyAnnotation.companyType == 2)
+        {
+//            newAnnotationView.pinColor = BMKPinAnnotationColorGreen;
+             newAnnotationView.image = [UIImage imageNamed:@"type2.png"];   //把大头针换成别的图片
+        }
+        else
+        {
+//            newAnnotationView.pinColor = BMKPinAnnotationColorRed;
+             newAnnotationView.image = [UIImage imageNamed:@"type3.png"];   //把大头针换成别的图片
+        }
+        
 
         return newAnnotationView;
     }

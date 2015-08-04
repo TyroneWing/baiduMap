@@ -11,6 +11,9 @@
 		1914E9A51B6B63CB00D04654 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1914E9A21B6B63CB00D04654 /* Default-568h@2x.png */; };
 		1914E9A61B6B63CB00D04654 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1914E9A31B6B63CB00D04654 /* Default.png */; };
 		1914E9A71B6B63CB00D04654 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1914E9A41B6B63CB00D04654 /* Default@2x.png */; };
+		194B78691B70AA3500EF9BC9 /* type1.png in Resources */ = {isa = PBXBuildFile; fileRef = 194B78661B70AA3500EF9BC9 /* type1.png */; };
+		194B786A1B70AA3500EF9BC9 /* type2.png in Resources */ = {isa = PBXBuildFile; fileRef = 194B78671B70AA3500EF9BC9 /* type2.png */; };
+		194B786B1B70AA3500EF9BC9 /* type3.png in Resources */ = {isa = PBXBuildFile; fileRef = 194B78681B70AA3500EF9BC9 /* type3.png */; };
 		19B986871B6F4023002F4CCE /* CompanyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 19B986861B6F4023002F4CCE /* CompanyClass.m */; };
 		19F8ED6A1B6C79A700687FE7 /* MyBMKPointAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F8ED691B6C79A700687FE7 /* MyBMKPointAnnotation.m */; };
 		19F8ED6D1B6CB3D400687FE7 /* companyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19F8ED6C1B6CB3D400687FE7 /* companyViewController.m */; };
@@ -50,6 +53,9 @@
 		1914E9A21B6B63CB00D04654 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		1914E9A31B6B63CB00D04654 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		1914E9A41B6B63CB00D04654 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		194B78661B70AA3500EF9BC9 /* type1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = type1.png; sourceTree = "<group>"; };
+		194B78671B70AA3500EF9BC9 /* type2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = type2.png; sourceTree = "<group>"; };
+		194B78681B70AA3500EF9BC9 /* type3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = type3.png; sourceTree = "<group>"; };
 		19B986851B6F4023002F4CCE /* CompanyClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CompanyClass.h; sourceTree = "<group>"; };
 		19B986861B6F4023002F4CCE /* CompanyClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CompanyClass.m; sourceTree = "<group>"; };
 		19F8ED681B6C797F00687FE7 /* MyBMKPointAnnotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyBMKPointAnnotation.h; sourceTree = "<group>"; };
@@ -143,6 +149,9 @@
 		19FD28161B69C5EF00207D10 /* baiduMap */ = {
 			isa = PBXGroup;
 			children = (
+				194B78661B70AA3500EF9BC9 /* type1.png */,
+				194B78671B70AA3500EF9BC9 /* type2.png */,
+				194B78681B70AA3500EF9BC9 /* type3.png */,
 				19FD281B1B69C5EF00207D10 /* AppDelegate.h */,
 				19FD281C1B69C5EF00207D10 /* AppDelegate.m */,
 				19F8ED681B6C797F00687FE7 /* MyBMKPointAnnotation.h */,
@@ -287,10 +296,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				1914E9A71B6B63CB00D04654 /* Default@2x.png in Resources */,
+				194B786B1B70AA3500EF9BC9 /* type3.png in Resources */,
 				19FD28231B69C5EF00207D10 /* Main.storyboard in Resources */,
 				1914E9A51B6B63CB00D04654 /* Default-568h@2x.png in Resources */,
+				194B786A1B70AA3500EF9BC9 /* type2.png in Resources */,
 				19FD28801B69CDE500207D10 /* mapapi.bundle in Resources */,
 				1914E9A61B6B63CB00D04654 /* Default.png in Resources */,
+				194B78691B70AA3500EF9BC9 /* type1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
